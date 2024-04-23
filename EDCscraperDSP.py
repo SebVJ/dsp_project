@@ -47,6 +47,7 @@ monthly_ownership_costs = []
 technical_price = []
 price_change = []
 list_time = []
+description = []
 
 # Function to extract data from the current page
 def extract_data_from_page():
@@ -136,15 +137,20 @@ def extract_data_from_page():
         else:
             list_time.append("N/A")
 
+        description_element = driver.find_element(By.XPATH, '//div[@class="prose no-mb col-span-7 whitespace-pre-line lg:col-span-7"]')
+        description_text = description_element.text
+        description.append(description_text)
+
+
         driver.back()
         # Add wait time
         time.sleep(0.5)
 
 # Iterate through each address and click
 current_page = 1
-max_pages = 4 # Set the maximum number of pages you want to scrape
+max_pages = 1 # Set the maximum number of pages you want to scrape when testing
 
-while True:
+while True: # Set to 'True' when scraping all available pages
     # Extract data from the current page
     extract_data_from_page()
 
@@ -198,7 +204,8 @@ df = pd.DataFrame({"Address": addresses,
                    "Energy Rating": energy_rating,
                    "Monthly Ownership Costs": monthly_ownership_costs,
                    "Price Change": price_change,
-                   "List Time": list_time})
+                   "List Time": list_time,
+                   "Description": description})
 
 
 # Split post code into post code and city and drop original column
@@ -261,4 +268,5 @@ df["Price Category"] = pd.cut(df["Price"], bins=bin_edges, labels=bin_labels, in
 print(df)
 
 filePath = Path("/Users/sebastian/Documents/Selenium Project/Aarhus Kommune Real Estate data - Scraped from EDC.csv")
-df.to_csv(filePath, encoding="utf-8")
+df.to_csv(filePath, encoding="utf-8", index=False, sep="\t")
+
