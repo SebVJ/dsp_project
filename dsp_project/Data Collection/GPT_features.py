@@ -73,20 +73,22 @@ tools_schema = {
     "parameters": parameters_schema,
 }
 
+OPENAI_API_KEY = open('.env','r').read()
+
 client = OpenAI(
-    api_key = os.environ['OPENAI_API_KEY']
+    api_key = OPENAI_API_KEY
 )
 
 completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
   messages=[
-    {"role": "system", "content": system_message},
+    {"role": "system", "content": system_message + "use the following schema to create a response" + str(parameters_schema)},
     {"role": "user", "content": df['Description'].iloc[1]}
-  ],
-  tools =   [tools_schema]
+  ]
+  #,
+  #tools =   [tools_schema]
 )
 
-print(completion['choices'][0]['message']['content'])
-
+print(completion.get_content())
 
 
