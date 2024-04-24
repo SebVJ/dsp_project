@@ -1,5 +1,6 @@
 from openai import OpenAI
 import pandas as pd
+import os
 
 df = pd.read_excel('/Users/andreasbrogaard/Documents/dsp_project/EDC w. description.xlsx')
 
@@ -66,13 +67,15 @@ parameters_schema = {
     #"required": ["location", "budget_level", "purpose"],
 }
 
-function_schema = {
+tools_schema = {
     "name": "Extract_parameters_from_text",
     "description": "Extract parameters from the text.",
     "parameters": parameters_schema,
 }
 
-client = OpenAI()
+client = OpenAI(
+    api_key = os.environ['OPENAI_API_KEY']
+)
 
 completion = client.chat.completions.create(
   model="gpt-3.5-turbo",
@@ -80,7 +83,7 @@ completion = client.chat.completions.create(
     {"role": "system", "content": system_message},
     {"role": "user", "content": df['Description'].iloc[1]}
   ],
-  functions=[function_schema]
+  tools =   [tools_schema]
 )
 
 print(completion['choices'][0]['message']['content'])
