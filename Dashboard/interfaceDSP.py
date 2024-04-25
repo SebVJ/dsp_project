@@ -1,14 +1,11 @@
-import requests
 import streamlit as st
-from streamlit_lottie import st_lottie
 import pandas as pd
 import matplotlib.pyplot as plt
-import math
 
 #Data
 data = pd.read_csv("Ames_Housing_Data.csv")
 
-
+print(data)
 #Standard website config.
 st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout = "wide")
 
@@ -65,7 +62,7 @@ model.fit(X_train, y_train)
 
 
 
-
+"""
 st.subheader("Property Price Predictor")
 
 st.write("### Input Data")
@@ -125,3 +122,4 @@ df = pd.DataFrame(
 st.write("### Payment Schedule")
 payments_df = df[["Year", "Remaining Balance"]].groupby("Year").min()
 st.line_chart(payments_df)   
+"""
