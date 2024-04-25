@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import math
 
 #Data
 data = pd.read_csv("Ames_Housing_Data.csv")
 
-
+print(data)
 #Standard website config.
 st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout = "wide")
 
