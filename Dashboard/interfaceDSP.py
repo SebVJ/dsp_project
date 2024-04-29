@@ -5,7 +5,6 @@ import matplotlib.pyplot as plt
 #Data
 data = pd.read_csv("Ames_Housing_Data.csv")
 
-print(data)
 #Standard website config.
 st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout = "wide")
 
@@ -47,21 +46,44 @@ with st.container():
 #__________________________________________________________________________
 #Tool section 1
 
-#Train model
+### Train model ####
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-X = data[['MS Zoning', 'Lot Area', 'House Style', 'Year Built']]
+data.info() #we have two 'object' variables (which we'll later OneHot encode)
+
+#Removing small categories and converting 'Year Built' to 'Age'
+data = data[data['House Style'] != '2.5Fin']#Running this for categories in variables that have a low count
+data = data[data['House Style'] != '1.5Unf']
+data = data[data['House Style'] != '2.5Unf'] 
+data = data[data['MS Zoning'] != 'RH'] 
+print(data['House Style'].value_counts()) #Counting category occurences.
+
+data['Age'] = 2024 - data['Year Built'] #Converting variable
+data = data.drop(columns=['Year Built'])#Removing old variable
+
+## Data and feature engineering ##
+X = data[['MS Zoning', 'Lot Area', 'House Style', 'Age']]
 y = data['SalePrice']
 
+#OneHot encoding
+X = pd.get_dummies(X, columns=['House Style', 'MS Zoning'])
+
+#Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 model = LinearRegression()
 
 model.fit(X_train, y_train)
 
+y_pred = model.predict(X_test)
 
-
+from sklearn.metrics import mean_squared_error
+rmse = mean_squared_error(y_test, y_pred, squared=False)
+print(rmse)
+import statistics
+dev = rmse/statistics.mean(y)
+print(dev) #Model fucking sucks
 """
 st.subheader("Property Price Predictor")
 
