@@ -1,1 +1,1 @@
-Hej Drenge - Skub med omhu ;) 
+Hej Drenge
