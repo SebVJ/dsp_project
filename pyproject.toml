@@ -19,6 +19,7 @@ openpyxl = "^3.1.2"
 streamlit = "^1.33.0"
 matplotlib = "^3.8.4"
 scikit-learn = "^1.4.2"
+joblib = "^1.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
