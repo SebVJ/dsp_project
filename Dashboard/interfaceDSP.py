@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+print(os.getcwd())
+os.chdir('C:/Users/MadsN/Desktop/DSP_project/dsp_project/Dashboard')
 
 #Data
 data = pd.read_csv("Ames_Housing_Data.csv")
 
-print(data)
+
 #Standard website config.
 st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout = "wide")
 
@@ -45,81 +48,91 @@ with st.container():
     data_to_plot = data[['SalePrice']]
     st.line_chart(data=data_to_plot)
 #__________________________________________________________________________
-#Tool section 1
+#Training the model
 
-#Train model
+### Train model ####
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
-X = data[['MS Zoning', 'Lot Area', 'House Style', 'Year Built']]
+data.info() #we have two 'object' variables (which we'll later OneHot encode)
+
+#Removing small categories and converting 'Year Built' to 'Age'
+data = data[data['House Style'] != '2.5Fin']#Running this for categories in variables that have a low count
+data = data[data['House Style'] != '1.5Unf']
+data = data[data['House Style'] != '2.5Unf'] 
+data = data[data['MS Zoning'] != 'RH'] 
+print(data['House Style'].value_counts()) #Counting category occurences.
+
+data['Age'] = 2024 - data['Year Built'] #Converting variable
+data = data.drop(columns=['Year Built'])#Removing old variable
+
+## Data and feature engineering ##
+X = data[['Lot Area', 'Age']]
 y = data['SalePrice']
 
+#OneHot encoding
+#X = pd.get_dummies(X, columns=['House Style', 'MS Zoning'])
+
+X.info()
+
+#Split data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 model = LinearRegression()
 
 model.fit(X_train, y_train)
 
+y_pred = model.predict(X_test)
+
+from sklearn.metrics import mean_squared_error
+rmse = mean_squared_error(y_test, y_pred, squared=False)
+print(rmse)
+import statistics
+dev = rmse/statistics.mean(y)
+print(dev) 
+#______________________________________________________________________________________________________________
+#Implement tool in interface
+
+import joblib as jb
+#Save model to file
+jb.dump(model, 'house_price_prediction_model.pkl')
+
+#Load the trained model
+model = jb.load('house_price_prediction_model.pkl')
+
+#Title of dashboard
+st.title('Property Price Pedictor')
 
 
-"""
-st.subheader("Property Price Predictor")
+#house_styles = ['House Style_1.5Fin', 'House Style_1Story', 'House Style_2Story', 'House Style_SFoyer', 'House Style_SLvl']
+#ms_zoning = ['MS Zoning_A (agr)', 'MS Zoning_C (all)', 'MS Zoning_FV', 'MS Zoning_I (all)', 'MS Zoning_RL', 'MS Zoning_RM']
 
-st.write("### Input Data")
-col1, col2 = st.columns(2)
-home_value = col1.number_input("Home Value", min_value=0, value=500000)
-deposit = col1.number_input("Deposit", min_value=0, value=100000)
-interest_rate = col2.number_input("Interest Rate (in %)", min_value=0.0, value=5.5)
-loan_term = col2.number_input("Loan Term (in years)", min_value=1, value=30)
+# Input fields for the user to enter data
+lot_area = st.number_input('Lot Area', min_value=1000, max_value=20000, value=5000, step=100)
+age = st.slider('Age', 0, 100, 10)
 
-# Calculate the repayments.
-loan_amount = home_value - deposit
-monthly_interest_rate = (interest_rate / 100) / 12
-number_of_payments = loan_term * 12
-monthly_payment = (
-    loan_amount
-    * (monthly_interest_rate * (1 + monthly_interest_rate) ** number_of_payments)
-    / ((1 + monthly_interest_rate) ** number_of_payments - 1)
-)
+# Predict button
+if st.button('Predict Price'):
+    # Create the input DataFrame based on the inputs
+    input_data = pd.DataFrame({
+        'Lot Area': [lot_area],
+        'Age': [age]      
+    })
 
-# Display the repayments.
-total_payments = monthly_payment * number_of_payments
-total_interest = total_payments - loan_amount
+    
+# Ensure that all columns from the training dataset are present
+# Fill missing columns with zeros
 
-st.write("### Repayments")
-col1, col2, col3 = st.columns(3)
-col1.metric(label="Monthly Repayments", value=f"${monthly_payment:,.2f}")
-col2.metric(label="Total Repayments", value=f"${total_payments:,.0f}")
-col3.metric(label="Total Interest", value=f"${total_interest:,.0f}")
+    train_columns = model.feature_names_in_  # Replace with actual training columns if needed
+    for col in train_columns:
+        if col not in input_data.columns:
+            input_data[col] = 0
+          
+    # Predict the price using the model
+    prediction = model.predict(input_data)
+    
+    # Display the prediction
+    st.write(f'Predicted Sale Price: ${prediction[0]:,.2f}')
 
-
-# Create a data-frame with the payment schedule.
-schedule = []
-remaining_balance = loan_amount
-
-for i in range(1, number_of_payments + 1):
-    interest_payment = remaining_balance * monthly_interest_rate
-    principal_payment = monthly_payment - interest_payment
-    remaining_balance -= principal_payment
-    year = math.ceil(i / 12)  # Calculate the year into the loan
-    schedule.append(
-        [
-            i,
-            monthly_payment,
-            principal_payment,
-            interest_payment,
-            remaining_balance,
-            year,
-        ]
-    )
-
-df = pd.DataFrame(
-    schedule,
-    columns=["Month", "Payment", "Principal", "Interest", "Remaining Balance", "Year"],
-)
-
-# Display the data-frame as a chart.
-st.write("### Payment Schedule")
-payments_df = df[["Year", "Remaining Balance"]].groupby("Year").min()
-st.line_chart(payments_df)   
-"""
+# Optional: You might want to display the RMSE or other performance metrics
+st.write('Model RMSE:', rmse)
