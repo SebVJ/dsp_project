@@ -730,6 +730,16 @@ pyside6 = ["pyside6"]
 test = ["flaky", "ipyparallel", "pre-commit", "pytest (>=7.0)", "pytest-asyncio (>=0.23.5)", "pytest-cov", "pytest-timeout"]
 
 [[package]]
+name = "ipyparams"
+version = "0.2.1"
+description = "Send parameters/arguments to notebooks via URL query string parameters."
+optional = false
+python-versions = ">=3.4, <4"
+files = [
+    {file = "ipyparams-0.2.1.tar.gz", hash = "sha256:84848e26f38feef663f071657ef41b8408004eb727310b9c5f17586d04ab971c"},
+]
+
+[[package]]
 name = "ipython"
 version = "8.23.0"
 description = "IPython: Productive Interactive Computing"
@@ -804,13 +814,13 @@ i18n = ["Babel (>=2.7)"]
 
 [[package]]
 name = "joblib"
-version = "1.4.0"
+version = "1.4.2"
 description = "Lightweight pipelining with Python functions"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "joblib-1.4.0-py3-none-any.whl", hash = "sha256:42942470d4062537be4d54c83511186da1fc14ba354961a2114da91efa9a4ed7"},
-    {file = "joblib-1.4.0.tar.gz", hash = "sha256:1eb0dc091919cd384490de890cb5dfd538410a6d4b3b54eef09fb8c50b409b1c"},
+    {file = "joblib-1.4.2-py3-none-any.whl", hash = "sha256:06d478d5674cbc267e7496a410ee875abd68e4340feff4490bcb7afb88060ae6"},
+    {file = "joblib-1.4.2.tar.gz", hash = "sha256:2382c5816b2636fbd20a09e0f4e9dad4736765fdfb7dca582943b9c1366b3f0e"},
 ]
 
 [[package]]
@@ -2636,8 +2646,4 @@ h11 = ">=0.9.0,<1"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-<<<<<<< HEAD
-content-hash = "bb497d15cbee74cef951114cd409bcf37a82bb0bde5b264646cb0ea0f634971a"
-=======
-content-hash = "394e4d5c31b36d172866ffaa4361d57e5c8a3b0113a80c8705330cbc56cb9d9f"
->>>>>>> ce7e8c7ec170b93b3a980b94c827d2f053ab9a10
+content-hash = "1096fb6a913e176d65d579cb4ff6e143da5fde943d1c63b2d23b9a3f6188aa83"
