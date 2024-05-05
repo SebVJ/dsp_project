@@ -24,6 +24,7 @@ joblib = "^1.4.0"
 =======
 tensorflow = "^2.16.1"
 >>>>>>> ce7e8c7ec170b93b3a980b94c827d2f053ab9a10
+seaborn = "^0.13.2"
 
 
 [tool.poetry.group.dev.dependencies]
