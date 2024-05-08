@@ -17,9 +17,8 @@ st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout
 # Header section
 with st.container():
     st.subheader("Data Science Project, Spring 2024")
-    st.title("Property Price Predictor")
+    st.title("What should a house cost in Aarhus?")
     st.write("The following is a tool which will help you predict the market price of a property.") 
-    st.write("The tool requires property specifications as input which it then can use for price predictions by comparing properties of similar specifications.")
 
 
 #Intro section 1
@@ -27,29 +26,43 @@ with st.container():
     st.write("---")
     left_column, right_column = st.columns(2)
     with left_column:
-        st.header("How to use")
+        st.header("Model and Data Overview")
         st.write("##")
+        st.subheader("The Model")
         st.write(
             """
-            The price of the property is build on the following specifications which you will need to provide:
-            - Location
-            - Square meters
-            - Year of construction
-            - Anything else which is useful
+            - Random Forest regression model
+            - Trained on 197 datapoints
+            - 50 trees
+            - 19 parameters
+            - RMSE of 130.000 DKK
+            """
+        )
+        st.subheader("The Data")
+        st.write(
+            """
+        - Some data is retrieved directly from scraping real estate websites
+        - Some data is retrieved through ChatGPT API accessing scraped real estate sales descriptions
+        - Data is mostly categorical
+
             """
         )
         st.write("[Data sourced from >](https://edc.dk)")
     with right_column:
-        st.write("# Specifications")
+        st.write("# Dataset")
         
         st.write(data)
 
 #Intro section 2
+df = pd.read_csv('geopoints.csv')
+data_4_map = df[['lat','lon']]
 
 with st.container():
-    st.subheader("Historic property prices in Aarhus Kommune")
-    data_to_plot = data[['Ask.price_log']]
-    st.line_chart(data=data_to_plot)
+    st.write("# Map of dataset houses")
+    st.map(data_4_map)
+    #st.subheader("Historic property prices in Aarhus Kommune")
+    #data_to_plot = data[['Ask.price_log']]
+    #st.line_chart(data=data_to_plot)
 #__________________________________________________________________________
 
 #Loading the model
