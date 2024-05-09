@@ -17,6 +17,7 @@ st.set_page_config(page_title="Data Science Project", page_icon=":tada:", layout
 # Header section
 with st.container():
     st.subheader("Data Science Project, Spring 2024")
+    st.write("*Andreas Bogaard Jessen, Sebastian Villum Jensen, Nielsh-Christian Esmarch Juul, Mads Nielsen*")
     st.title("What should a house cost in Aarhus?")
     st.write("The following is a tool which will help you predict the market price of a property.") 
 
@@ -198,8 +199,7 @@ if st.button('Predict Price'):
         'Heating_type_fjernvarme': False,
         'Heating_type_floor heating': False,
         'Heating_type_not_stated': False
-        #Condition of house appears twice??
-        #Monthly ownership cost??
+
     })
     input_data[f'Type_{type}'] = True
     input_data[f'Energy_rating_{energy_rating}'] = True
