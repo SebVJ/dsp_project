@@ -1,0 +1,198 @@
+n,address,city,lat,lon
+0,Tingskovvej 70, Tranbjerg J,56.07696,10.12215
+1,Sejrøgade 18 4. TH, Aarhus C,56.15984,10.19782
+2,Todderupparken 14, Tilst,56.19012,10.08544
+3,Østergårdsvej 248 Astrup, Solbjerg,56.0345,10.09723
+4,Grøfthøjparken 162 3. th, Viby J,56.12401,10.13938
+5,Østergårdsvej 248 Astrup, Solbjerg,56.0345,10.09723
+6,Møllevangs Allé 177 Christiansbjerg, Aarhus N,56.17617,10.18637
+7,Gartnerparken 4K, Trige,56.25306,10.14379
+8,Elmehaven 18, Lystrup,56.24187,10.25005
+9,Falstersgade 6 3. th, Aarhus C,56.16305,10.20123
+10,Eckersbergsgade 19 1. tv, Aarhus C,56.15179,10.19567
+11,Poppeltoften 21, Hasselager,56.10259,10.09944
+12,Ewaldsgade 7 1., Aarhus C,56.14846,10.19614
+13,Sonnesgade 17 2. tv, Aarhus C,56.15038,10.19478
+14,Sydskrænten 6, Malling,56.03075,10.1868
+15,Hindbærhaven 63, Lystrup,56.24899,10.24026
+16,Kantorvænget 8 2. Dør/lejl. 188, Risskov,56.19934,10.20525
+17,Blomstervangen 1A, Egå,56.20617,10.27322
+18,Kildehaven 134, Lystrup,56.23366,10.22846
+19,Skovvejen 8, Aarhus C,56.16677,10.21815
+20,Chr. Wærums Gade 6 2. th, Aarhus C,56.14376,10.1926
+21,Bredgade 26, Malling,56.04183,10.19376
+22,Holmstruphøjvej 87 Holmstrup, Aarhus V,56.17769,10.1319
+23,Skovgårdsvænget 113, Tranbjerg J,56.09264,10.11599
+24,Ryvej 32B Hasle, Aarhus V,56.1659,10.15876
+25,Laurvigsgade 20 Christiansbjerg, Aarhus N,56.17822,10.19042
+26,Klokkeskovvej 15S st. th Dør/lejl. 17 Stavtrup, Viby J,56.13212,10.11561
+27,Enebærvej 22, Risskov,56.19716,10.24238
+28,Fredensgårdsvej 10, Højbjerg,56.12402,10.1843
+29,Kantorparken 26 2. tv, Risskov,56.19818,10.20976
+30,Vestre Ringgade 156 st. tv, Aarhus C,56.16645,10.18914
+31,Elverdalsvej 1G, Højbjerg,56.11457,10.20679
+32,Skovbjergvej 7, Højbjerg,56.1157,10.20535
+33,Strandskadevej 16, Egå,56.23458,10.32729
+34,Jordbrovej 33 st. th, Aarhus N,56.1746,10.20021
+35,Kildeagervej 224, Hasselager,56.11442,10.0887
+36,Skæringvej 120, Lystrup,56.22848,10.24377
+37,Søndre Ringgade 63 4. mf, Aarhus C,56.14566,10.18674
+38,Skelagervej 442, Aarhus N,56.1905,10.19415
+39,Toftesvinget 33, Egå,56.22258,10.29618
+40,Stationsgade 3, Risskov,56.18127,10.23442
+41,Egevænget 116, Tranbjerg J,56.0911,10.14547
+42,Sejrøgade 18 4. TH, Aarhus C,56.15984,10.19782
+43,Åhusene 4 9. Dør/lejl. 3, Aarhus C,56.15284,10.1886
+44,Langenæs Allé 45 st. tv, Aarhus C,56.14138,10.18105
+45,Tranbjerg Stationsvej 4H, Tranbjerg J,56.09752,10.13424
+46,Trankærgårdsvej 52, Tranbjerg J,56.0852,10.13685
+47,Smoven 3 Lisbjerg, Aarhus N,56.22126,10.16431
+48,Lystruplund 37, Lystrup,56.22938,10.23226
+49,Hyldehaven 24, Lystrup,56.23934,10.23582
+50,Gammel Stillingvej 421, Harlev J,56.14595,10.00011
+51,Florasvej 25, Harlev J,56.14295,9.99742
+52,Hougårdsvej 34 2. TV, Brabrand,56.15086,10.09342
+53,Kølsmosevej 9 Enslev, Hasselager,56.09591,10.08393
+54,Sjællandsgade 73 st., Aarhus C,56.16275,10.20589
+55,Elsted Skolevej 10, Lystrup,56.24159,10.22721
+56,Tisetvej 19 Tiset, Solbjerg,56.06066,10.10235
+57,Teglbakken 24, Højbjerg,56.10766,10.21382
+58,Randersvej 526, Trige,56.25658,10.15454
+59,Spergelbakken 7, Lystrup,56.23551,10.22328
+60,Sjællandsgade 110 st., Aarhus C,56.16367,10.20378
+61,Vestervej 32, Harlev J,56.14084,9.99619
+62,Ceresbyen 31 7. Dør/lejl. 3, Aarhus C,56.15636,10.19103
+63,Daugbjergvej 28 3. Dør/lejl. 17, Aarhus C,56.15495,10.18318
+64,Kildehaven 164, Lystrup,56.23309,10.22939
+65,Kjeld Tolstrups Gade 38 st., Aarhus C,56.15404,10.19322
+66,Tage-Hansens Gade 13 1. th, Aarhus C,56.158,10.18443
+67,Lergravvænget 42, Trige,56.25485,10.15213
+68,Grøfthøjparken 162 16. tv Dør/lejl. 204, Viby J,56.12401,10.13938
+69,Jordbrovej 29 3. Dør/lejl. 2, Aarhus N,56.1746,10.20021
+70,Willemoesgade 41 1. Dør/lejl. 4, Aarhus N,56.17474,10.21187
+71,Næshøjvej 29B, Harlev J,56.14443,9.99375
+72,Dannebrogsgade 3 1. Dør/lejl. 5, Aarhus C,56.14614,10.19409
+73,Max Müllers Gade 5 5. Dør/lejl. tv, Aarhus C,56.14484,10.18984
+74,Eckersbergsgade 30K, Aarhus C,56.15077,10.19533
+75,Blåmunkevej 4, Risskov,56.19609,10.24812
+76,Vestermarken 9K Stavtrup, Viby J,56.12765,10.11354
+77,Muslingevej 17, Egå,56.20985,10.27845
+78,Valdemars Have 7 4. mf, Aarhus C,56.15162,10.19719
+79,Frederiks Plads 26 5. Dør/lejl. 3, Aarhus C,56.14876,10.20842
+80,Thunøgade 50 st., Aarhus C,56.1608,10.20163
+81,Ketting Parkvej 201, Harlev J,56.14095,9.99168
+82,Lønstrupvej 10, Egå,56.21982,10.29544
+83,Ormslevvej 464 Ormslev, Viby J,56.12534,10.05993
+84,Frederiksplads 16 2. Dør/lejl. 8, Aarhus C,56.1489,10.20847
+85,Adelvej 8, Risskov,56.19749,10.2543
+86,Under Rønnene 32, Egå,56.24064,10.33113
+87,Strandvejen 18 1., Aarhus C,56.14698,10.20894
+88,Engdalsvej 87G, Brabrand,56.15091,10.12265
+89,Strandhusvej 49, Egå,56.20693,10.28317
+90,Rouloen 30, Egå,56.2079,10.28179
+91,Tingskovvej 70, Tranbjerg J,56.07696,10.12215
+92,Skivholmevej 27, Sabro,56.19308,9.99628
+93,Skovvejen 9 1. th, Aarhus C,56.16388,10.21666
+94,Balskildevej 33 Ask, Malling,56.03093,10.12442
+95,Skådehøjen 4, Højbjerg,56.09717,10.21675
+96,Slotslyngen 7 3. tv, Aarhus V,56.1735,10.17969
+97,Lundgårdsvej 44, Højbjerg,56.11896,10.16366
+98,Bygmarken 6, Lystrup,56.23487,10.23961
+99,Lomvievej 5 Studstrup, Skødstrup,56.25879,10.33814
+100,J. Skjoldborgs Vej 12, Åbyhøj,56.15513,10.15074
+101,Skæring Hedevej 168, Egå,56.23286,10.3035
+102,Skæring Hedevej 168, Egå,56.23286,10.3035
+103,Jegstrupvænget 690, Tranbjerg J,56.0909,10.12421
+104,Brobjerg Parkvej 99 st. tv, Egå,56.20342,10.26136
+105,Grøndalsvej 238, Viby J,56.12264,10.1357
+106,Østre Havevej 43, Lystrup,56.23271,10.22956
+107,Frederiksholmsvej 15, Viby J,56.13244,10.16429
+108,Rugmarken 15, Lystrup,56.23528,10.24559
+109,Nymarks Allé 238B Dør/lejl. 20, Mårslet,56.0592,10.16158
+110,Rosendalvej 38 Stavtrup, Viby J,56.13505,10.11994
+111,Brobjerg Parkvej 97 1. mf, Egå,56.20342,10.26137
+112,Rundhøj Allé 113 1. th, Højbjerg,56.11826,10.17575
+113,Koltvej 40, Hasselager,56.10751,10.0931
+114,Casper Møllers Vej 30, Risskov,56.19293,10.2528
+115,Hybenhaven 2, Lystrup,56.24835,10.24515
+116,Sjællandsgade 5 2., Aarhus C,56.16121,10.20936
+117,Koldkilde 95 Elev, Lystrup,56.23792,10.19396
+118,Kalmargade 16A Christiansbjerg, Aarhus N,56.17947,10.19779
+119,Østerbyvej 1B, Tranbjerg J,56.08417,10.1389
+120,Østerbyvej 1A, Tranbjerg J,56.08417,10.1389
+121,Østerbyvej 1C, Tranbjerg J,56.08417,10.1389
+122,Kaj Munks Vej 66 st. th Dør/lejl. 24, Viby J,56.1302,10.18142
+123,Agertoften 6, Malling,56.03787,10.20467
+124,Skanderborgvej 94 2. Dør/lejl. 1, Aarhus C,56.13958,10.18179
+125,Gyvelmarksvej 6, Risskov,56.19673,10.25917
+126,Vestre Skovvej 30, Risskov,56.18503,10.22511
+127,Mejlgade 78C 4., Aarhus C,56.16124,10.21403
+128,Ladegårdsbakken 14 Spørring, Trige,56.30117,10.14665
+129,Bergensgade 18 Christiansbjerg, Aarhus N,56.17629,10.20003
+130,Kalmargade 16B Christiansbjerg, Aarhus N,56.17952,10.19776
+131,Rønnehaven 50, Lystrup,56.23855,10.24208
+132,Asmusgårdsvej 56, Lystrup,56.24717,10.24418
+133,Kolt Østerparken 172, Hasselager,56.11325,10.09413
+134,Hybenrosevej 6, Skødstrup,56.27062,10.30611
+135,Jægergårdsgade 31 2., Aarhus C,56.1481,10.19857
+136,Engtoften 4E, Viby J,56.12364,10.16703
+137,Ormslevvej 110, Viby J,56.129,10.14755
+138,Præstehaven 17 Hasle, Aarhus V,56.16328,10.17227
+139,Norsgade 31 2., Aarhus C,56.16146,10.20723
+140,Rundhøj Allé 93 1. th, Højbjerg,56.11826,10.17569
+141,Lyngbakken 17, Lystrup,56.23723,10.22487
+142,Eghovedvej 42, Malling,56.04471,10.19946
+143,Havlundsvej 34, Egå,56.23165,10.32729
+144,Nørrevænget 30, Tranbjerg J,56.09318,10.14624
+145,Holmevej 114, Højbjerg,56.12352,10.19297
+146,Bronzealdervej 128B Hasle, Aarhus V,56.17116,10.13711
+147,Østermarksvej 96, Tilst,56.19361,10.12063
+148,Engtoften 4A 1. Dør/lejl. 1, Viby J,56.12372,10.16704
+149,Marselis Boulevard 28 6. Dør/lejl. 6, Aarhus C,56.1416,10.20181
+150,Olof Palmes Allé 31A 1. Dør/lejl. 2, Aarhus N,56.18779,10.18559
+151,Vestre Strandallé 105, Risskov,56.19354,10.23371
+152,Lerbækvej 16, Risskov,56.19071,10.23474
+153,Grumstolsvej 61A, Højbjerg,56.11296,10.2219
+154,Jordbrovej 16 2. tv, Aarhus N,56.17431,10.20012
+155,Jordbrovej 16 2. tv, Aarhus N,56.17431,10.20012
+156,Holmevej 183, Højbjerg,56.11879,10.18051
+157,Strandbyvej 2A, Risskov,56.2003,10.25706
+158,Rundhøj Allé 88 2. MF, Højbjerg,56.11989,10.17529
+159,Aldersrovej 29, Aarhus N,56.17172,10.2114
+160,Ormslevvej 277B st., Viby J,56.12863,10.11499
+161,Borggade 3 3. th, Aarhus C,56.15948,10.20876
+162,Thunøgade 42 st., Aarhus C,56.16111,10.20399
+163,Onsholtgårdsvej 108, Viby J,56.12349,10.12383
+164,Kirkevænget 124, Tranbjerg J,56.08572,10.12594
+165,Framlevvej 10 Framlev, Harlev J,56.15582,10.00962
+166,Christen Købkes Gade 19, Aarhus C,56.15049,10.19601
+167,Ellemosevej 21, Tranbjerg J,56.10355,10.14223
+168,Engtoften 10 st. Dør/lejl. 1, Viby J,56.12266,10.16692
+169,Onsholtgårdsvej 38, Viby J,56.12205,10.12186
+170,Espedalen 51, Risskov,56.20286,10.22345
+171,Solbærhaven 162, Lystrup,56.24312,10.24016
+172,Sonnesgade 17 ST. TV, Aarhus C,56.15038,10.19478
+173,Eckersbergsgade 19 4. tv, Aarhus C,56.15179,10.19567
+174,Kildehaven 76, Lystrup,56.23373,10.227
+175,Rugmarken 57, Lystrup,56.23674,10.24664
+176,Vestervang 3 Dør/lejl. 3002, Aarhus C,56.16205,10.19422
+177,Birkehaven 11, Lystrup,56.24679,10.23493
+178,Silkeborgvej 7 1. Dør/lejl. 2, Aarhus C,56.1569,10.19072
+179,Sølykken 15, Hjortshøj,56.25311,10.27309
+180,Ravnholtvej 48 Ravnholt, Tranbjerg J,56.06376,10.10825
+181,Donsvej 1A, Brabrand,56.1533,10.09699
+182,Sølykken 7, Hjortshøj,56.25294,10.27283
+183,Engdalsvej 71A 1. th, Brabrand,56.15056,10.12034
+184,Nobilisvej 9, Egå,56.24276,10.32866
+185,Rosenvænget 11 Løgten, Skødstrup,56.27334,10.31392
+186,Brendstrupvej 37 2. tv Christiansbjerg, Aarhus N,56.17531,10.19726
+187,Engvangen 23B, Lystrup,56.22712,10.23309
+188,Villadsensvej 3, Risskov,56.18577,10.21735
+189,Ormslevvej 277B 1., Viby J,56.12863,10.11499
+190,Pigeonvej 6, Højbjerg,56.11741,10.18176
+191,Pilegårdsvej 100A Kolt, Hasselager,56.10585,10.07918
+192,Randersvej 591 Spørring, Trige,56.29981,10.14006
+193,Ladegårdsbakken 13 Spørring, Trige,56.30131,10.14838
+194,Christian X's Vej 181, Højbjerg,56.11903,10.16601
+195,Lystrupvej 10, Risskov,56.20078,10.23728
+196,Kantorparken 22 2. tv, Risskov,56.19785,10.20938
