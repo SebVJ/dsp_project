@@ -19,12 +19,13 @@ openpyxl = "^3.1.2"
 streamlit = "^1.33.0"
 matplotlib = "^3.8.4"
 scikit-learn = "^1.4.2"
-<<<<<<< HEAD
-joblib = "^1.4.0"
-=======
 tensorflow = "^2.16.1"
->>>>>>> ce7e8c7ec170b93b3a980b94c827d2f053ab9a10
 seaborn = "^0.13.2"
+joblib = "^1.4.2"
+ipyparams = "^0.2.1"
+pipreq = "^0.4"
+wordcloud = "^1.9.3"
+textblob = "^0.18.0.post0"
 
 
 [tool.poetry.group.dev.dependencies]
