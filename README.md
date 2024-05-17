@@ -1,4 +1,4 @@
-
+Link to dashboard: https://dsp2024.streamlit.app/?fbclid=IwAR0f_0J_uQaAOlFhcOr-sFyVs6WVZ_vgArgSsThjQ84lvIk1pcK79EMX024
 This project is a attempt to predict house prices in the Aarhus area in Denmark
 
 The structure of the git repo is as follows:
